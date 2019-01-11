@@ -3,9 +3,54 @@
 
 @include main;
 
-header {
-	width: 100%;
-	height: 50em;
-	background: url('../slike/background.jpg');
-	background-size: cover;
-}
+section{
+    padding: 7em 15em;
+  }
+  main, footer{
+    padding: 2em 15em;
+  }
+  main{
+      height: 100vh;
+      background-image:url("../slike/background.jpg");
+      background-size: cover;
+      
+  }
+  header{
+	  background-color: #ffffff;
+	  padding: 1em;
+	  @include clearfix;
+  }
+  .logo{
+	  font-family: $logo_font;
+	  font-size: 2em;
+	  font-weight: bold;
+	  float: left;
+	  span{ color: $main_red;}
+  }
+  nav{
+	  float: right;
+	  ul{
+		  margin-top: 1em;
+		  list-style: none;
+		  li{
+			  display: inline-block;
+			  margin-left: 1em;
+			  a{
+				  text-decoration: none;
+				  text-transform: uppercase;
+				  &:hover {color: #000000}
+			  }
+		  }
+	  }
+  }
+  h1,h3{
+	  color: white;
+	  text-align: center;
+	  font-weight: normal;
+  }
+  h1{
+	  font-size: 3m;
+	  border-bottom: 1px solid $main_red;
+	  width: 60%;
+	  margin: 20% auto 0;
+  }
